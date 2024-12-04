@@ -1,0 +1,15 @@
+{
+  "name": "is-31_driukvv_laba8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vladyslav <mycoolemail@mail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "basiclightbox": "^5.0.4"
+  }
+}
