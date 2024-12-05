@@ -11,7 +11,7 @@ function storeInputData(event) {
     let inputEmail = document.querySelector(".feedback-form input[type='email']");
     let inputMessage = document.querySelector(".feedback-form textarea[name='message']");
 
-    if (targetElem === inputEmail) {
+    if (targetElem === inputEmail || targetElem === inputMessage ) {
         formData.email = inputEmail.value.trim();
         formData.message = inputMessage.value.trim();
     }
@@ -20,8 +20,8 @@ function storeInputData(event) {
     console.log(localStorage.getItem("feedback-form-state"));
 }
 
-feedbackForm.addEventListener("submit", submitInputtData);
-function submitInputtData(event) {
+feedbackForm.addEventListener("submit", submitInputData);
+function submitInputData(event) {
     event.preventDefault();
     let formElements = feedbackForm.elements;
     let userEmail = formElements["email"].value.trim();
