@@ -1,5 +1,5 @@
 //import * as basicLightbox from "../node_modules/basiclightbox/src/scripts/main.js"
-
+// Масив об'єктів з інформацією про зображення
 const images = [
     {
         preview:
@@ -66,10 +66,13 @@ const images = [
     }
 ];
 
+// Елемент списку галереї
 let gallery = document.querySelector('ul.gallery');
+// Цикл, що перебирає масив зображень та додає кожне зображення до DOM
 images.forEach((image) => {
     imageAdd(image);
 });
+// Функція, що створює елементи списку та додає їх до галереї
 function imageAdd(imgObj) {
     let imgElem = document.createElement("img");
     imgElem.src = imgObj.preview;
@@ -79,17 +82,18 @@ function imageAdd(imgObj) {
     listItem.append(imgElem);
     gallery.append(listItem);
 };
-
+// Обробник події "click" для галереї
 gallery.addEventListener('click', function (event) {
     let clickedImage = images.find((img) => img.preview === event.target.src);
     console.log(clickedImage.original);
-
+    // Створення модального вікна з повнорозмірним зображенням
     const instance = basicLightbox.create(`
         <div class="modalWindow">
                  <img src="${clickedImage.original}" alt="${clickedImage.description}">
                 <p>${clickedImage.description}</p>
         </div>
-    `, {closable: true});
+    `, { closable: true }); // Налаштування модального вікна, щоб його можна було закривати
 
+    // Відображення модального вікна
     instance.show();
 });

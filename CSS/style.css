@@ -1,3 +1,4 @@
+/* Загальні стилі сторінок */
 body {
     background-color: #C0DFC7;
 }
@@ -7,6 +8,7 @@ h1, h2 {
     color: rgb(5, 21, 197);
 }
 
+/* Стилі для списку галереї зображень */
 ul.gallery {
     list-style: none;
     margin: 0px;
@@ -36,6 +38,7 @@ ul.gallery li img:hover {
     box-shadow: 0 0 15px 5px rgba(255, 247, 0, 0.8); 
 }
 
+/* Стиль для модального вікна */
 div.modalWindow{
     display: flex;
     flex-direction: column;
@@ -53,6 +56,7 @@ div.modalWindow p{
     text-align: center;
 }
 
+/* Стиль для кнопки переходу між сторінками */
 a.buttonblue {
     width: 200px;
     padding: 15px 25px;
@@ -74,10 +78,7 @@ a.buttonblue:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
+/* Стиль для форми зворотнього зв'язку*/
 form.feedback-form{
     margin-left: 35%;
     margin-right: 35%;
