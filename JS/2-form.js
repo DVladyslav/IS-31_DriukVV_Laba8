@@ -20,8 +20,8 @@ function storeInputData(event) {
     console.log(localStorage.getItem("feedback-form-state"));
 }
 
-feedbackForm.addEventListener("submit", submiInputtData);
-function submiInputtData(event) {
+feedbackForm.addEventListener("submit", submitInputtData);
+function submitInputtData(event) {
     event.preventDefault();
     let formElements = feedbackForm.elements;
     let userEmail = formElements["email"].value.trim();
